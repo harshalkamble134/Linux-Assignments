@@ -1,0 +1,27 @@
+#!/bin/bash
+#1. Write a shell script to Print prime numbers from 1 to n. Read the value of n from user.
+echo "Enter The Number : "
+read n
+function_prime()
+{
+(( unprime = 0 ))
+for(( i=2;i<x;i++))
+do
+        if [ $(($x % i)) -eq 0 ]
+        then
+                echo "$x is Not Prime"
+                (( unprime = 2 ))
+                break
+        fi
+done
+if [[ $unprime -eq 0 ]]
+then
+        echo "$x is Prime"
+        fi
+}
+x=`expr $n`
+while [[ $x -ge 2 ]]
+do
+        function_prime $x
+         x=`expr $x - 1`
+done
